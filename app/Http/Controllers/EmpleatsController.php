@@ -29,6 +29,16 @@ class empleatsController extends Controller
         return redirect()->route('empleats.index');
      }
 
+    public function show (empleats $empleats, $idempleats) {
+       $empleats = Empleats::findOrFail ($idempleats);
+        /* todo este código se resumen con findOrFail
+        if ($empleats == null){
+            return response()->view ('errors.404', [], 404);
+        }*/
+
+       return view ('empleats/show', compact('empleats'));
+    }
+
     public function edit(empleats $empleats) { 
         return view('empleats/edit', compact('empleats'));
     }

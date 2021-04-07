@@ -27,7 +27,10 @@ Route::get('/', function () {
    //Create
     Route::get('/empleats/create', [empleatsController::class, 'create'])->name('empleats.create');
     Route::post('/empleats', [empleatsController::class, 'store'])->name('empleats.store');
-
+    
+    //Show
+    Route::get('/empleats/{idempleats}', [empleatsController::class, 'show'])->name('empleats.show');
+   
     //Edit
     Route::get('/empleats/{empleats}/edit', [empleatsController::class, 'edit'])->name('empleats.edit');
     Route::put('/empleats/{empleats}', [empleatsController::class, 'update'])->name('empleats.update');
