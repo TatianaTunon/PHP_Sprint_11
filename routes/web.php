@@ -54,7 +54,3 @@ Route::get('/', function () {
     //Recuperacio
     Route::get ('/recuperacio', [loginController::class, 'showrecuperacio'])->name('auth.recuperacio');
     Route::post ('/recuperacio', [loginController::class, 'recuperacio']);
-
-
-//Route::get ('/recuperacio', [usuarioController::class, 'showrecuperacio'])->name('showrecuperacio');
-//Route::post ('/recuperacio', [usuarioController::class, 'recuperacio'])->name('recuperacio');
