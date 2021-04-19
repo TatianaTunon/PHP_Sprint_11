@@ -29,7 +29,7 @@ Route::get('/', function () {
     Route::post('/empleats', [empleatsController::class, 'store'])->name('empleats.store');
     
     //Show
-    Route::get('/empleats/{idempleats}', [empleatsController::class, 'show'])->name('empleats.show');
+    Route::get('/empleats/{id}', [empleatsController::class, 'show'])->name('empleats.show');
    
     //Edit
     Route::get('/empleats/{empleats}/edit', [empleatsController::class, 'edit'])->name('empleats.edit');
@@ -55,6 +55,3 @@ Route::get('/', function () {
     Route::get ('/recuperacio', [loginController::class, 'showrecuperacio'])->name('auth.recuperacio');
     Route::post ('/recuperacio', [loginController::class, 'recuperacio']);
 
-
-//Route::get ('/recuperacio', [usuarioController::class, 'showrecuperacio'])->name('showrecuperacio');
-//Route::post ('/recuperacio', [usuarioController::class, 'recuperacio'])->name('recuperacio');

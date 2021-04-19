@@ -26,7 +26,7 @@ class empleatsrequest extends FormRequest
         return [
             'name' => 'required | max:255',
             'last_name' => 'required | max:255',
-            'email' => 'required | email | max:255',
+            'Email' => 'required | email | max:255',
             'phone' => 'required | max:15',
             'job' => 'required | max:255',
         ];
@@ -35,7 +35,7 @@ class empleatsrequest extends FormRequest
         return [
           "name" => 'nombre',
           "last_name" => 'apellido',
-          'email' => 'email',
+          'Email' => 'Email',
           "phone" => 'teléfono',
           "job" => 'job',
         ];
@@ -45,7 +45,7 @@ class empleatsrequest extends FormRequest
         return [
             "name.required" => "El :attribute es un parametro requerido",
             "last_name.required" => "El :attribute es un parametro requerido",
-            "email.required" => "El :attribute es un parametro requerido",
+            "Email.required" => "El :attribute es un parametro requerido",
             "phone.required" => "El :attribute no es un parametro requerido",
             "job.required" => "El :attribute es un parametro requerido",
         ];

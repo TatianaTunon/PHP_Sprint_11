@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Libreria Técnica</title>
+    <title>CRUD</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1.0">

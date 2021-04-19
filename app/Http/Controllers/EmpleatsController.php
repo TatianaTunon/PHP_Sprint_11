@@ -29,8 +29,8 @@ class empleatsController extends Controller
         return redirect()->route('empleats.index');
      }
 
-    public function show (empleats $empleats, $idempleats) {
-       $empleats = Empleats::findOrFail ($idempleats);
+    public function show (empleats $empleats, $id) {
+       $empleats = Empleats::findOrFail ($id);
         /* todo este código se resumen con findOrFail
         if ($empleats == null){
             return response()->view ('errors.404', [], 404);
@@ -48,7 +48,7 @@ class empleatsController extends Controller
         $request->validate([ //necesario para la validación de edit
             "name" => 'required | max:255',
             "last_name" => 'required | max:255',
-            "email" => 'required | email | max:255',
+            "Email" => 'required | email | max:255',
             "phone" => 'required | max:15',
             "job" => 'required | max:255',
         ]);

@@ -46,14 +46,14 @@
       <th scope="row">{{ $empleat->idempleats }}</th>
       <td>{{ $empleat->name }}</td>
       <td>{{ $empleat->last_name }}</td>
-      <td>{{ $empleat->email }}</td>
+      <td>{{ $empleat->Email }}</td>
       <td>{{ $empleat->phone }}</td>
       <td>{{ $empleat->job}}</td>
       <td>
       <div class="btn-group">
-        <a href="{{ route('empleats.edit', $empleat->idempleats)}}" class="btn btn-warning">Editar</a>
+        <a href="{{ route('empleats.edit', $empleat->id)}}" class="btn btn-warning">Editar</a>
     
-        <form method="POST" action="{{ route('empleats.destroy', $empleat->idempleats )}}">
+        <form method="POST" action="{{ route('empleats.destroy', $empleat->id)}}">
           @csrf
           @method('DELETE')
           <button type="submit" href="#" class="btn btn-danger">Borrar</button>
